@@ -1,0 +1,186 @@
+/* Estilo general */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #fff7e6;
+  color: #333;
+}
+
+/* Título */
+.header {
+  background: linear-gradient(45deg, #ff9500, #ffcc00);
+  padding: 20px;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.carrito-icono {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+/* Catálogo */
+.productos {
+  max-width: 1000px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 0 20px;
+}
+
+.producto {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.15);
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.2s;
+}
+
+.producto:hover {
+  transform: translateY(-5px);
+}
+
+.producto img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.precio {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #e67e00;
+  margin: 10px 0;
+}
+
+.producto button {
+  background: linear-gradient(45deg, #ff8000, #ffb700);
+  border: none;
+  padding: 10px 18px;
+  border-radius: 25px;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.producto button:hover {
+  background: linear-gradient(45deg, #ff6600, #e0a000);
+  transform: scale(1.05);
+}
+
+/* Carrito */
+#carrito {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  width: 300px;
+  height: 100%;
+  background: #fffbea;
+  border-left: 3px solid #ff9500;
+  padding: 20px;
+  box-shadow: -2px 0 6px rgba(0,0,0,0.2);
+  transition: right 0.3s ease;
+  overflow-y: auto;
+}
+
+#carrito.mostrar {
+  right: 0;
+}
+
+#carrito h2 {
+  margin-top: 40px;
+  font-size: 1.4em;
+}
+
+#lista-carrito {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#lista-carrito li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+}
+
+.eliminar {
+  background: #ff4d4d;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+.eliminar:hover {
+  background: #cc0000;
+}
+
+/* Botón de cerrar carrito */
+.cerrar {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #ff4d4d;
+  transition: 0.2s;
+}
+
+.cerrar:hover {
+  color: #cc0000;
+}
+
+/* Botón de finalizar */
+.finalizar {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  background: linear-gradient(45deg, #28a745, #34d058);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.finalizar:hover {
+  background: linear-gradient(45deg, #218838, #1f9d5c);
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background: #ff9500;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}

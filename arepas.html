@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arepitas Felices</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Título principal -->
+  <header class="header">
+    <h1>🌽 Arepitas Felices 🥰</h1>
+    <div class="carrito-icono" onclick="toggleCarrito()">
+      🛒 <span id="contador-carrito">0</span>
+    </div>
+  </header>
+
+  <!-- Catálogo de productos -->
+  <main class="productos">
+    <div class="producto">
+      <img src="arepas/queso.jpg" alt="Arepa de Queso">
+      <h3>Arepa de Queso</h3>
+      <p class="precio">$5</p>
+      <button onclick="agregarAlCarrito('Arepa de Queso', 5)">Agregar</button>
+    </div>
+    <div class="producto">
+      <img src="arepas/main.jpg" alt="Arepa de Pollo">
+      <h3>Arepa de Pollo</h3>
+      <p class="precio">$7</p>
+      <button onclick="agregarAlCarrito('Arepa de Pollo', 7)">Agregar</button>
+    </div>
+    <div class="producto">
+      <img src="arepas/carne.jpg" alt="Arepa de Carne">
+      <h3>Arepa de Carne</h3>
+      <p class="precio">$7.5</p>
+      <button onclick="agregarAlCarrito('Arepa de Carne', 7)">Agregar</button>
+    </div>
+  </main>
+
+  <!-- Carrito lateral -->
+  <aside id="carrito">
+    <button class="cerrar" onclick="toggleCarrito()">✖</button>
+    <h2>🛒 Tu carrito</h2>
+    <ul id="lista-carrito"></ul>
+    <p id="total">Total: $0</p>
+    <button class="finalizar" onclick="finalizarPedido()">Finalizar compra</button>
+  </aside>
+
+  <!-- Footer -->
+  <footer>
+    <p>📞 +51 908 625 014 | 🌐 www.arepitasfelices.com</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
